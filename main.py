@@ -10,8 +10,8 @@ app = FastAPI()
 @app.post("/documents")
 async def search_data(item: Item):
     print(item)
-    return JSONResponse({"text": item.dict()})
+    return {"text": item.text}
 
 @app.get("/")
 async def homepage():
-    return JSONResponse({'hello': 'world'})
+    return {'hello': 'world'}
